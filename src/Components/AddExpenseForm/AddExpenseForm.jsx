@@ -46,15 +46,15 @@ const ExpenseCard = ({ addExpense }) => {
   return (
     
     <>
-    <div className='expense'>
-      <div className='wallet'>
+    <div style={{border: '1px solid black',width: '355.41px',height: '181px',borderRadius:'10px',textAlign:'center',backgroundColor:'rgba(155, 155, 155, 1)'}}>
+      <div style={{fontFamily:'ubuntu',fontSize:'30px',fontWeight:'700',lineHeight:'34.47px',textAlign:'center',color:'aliceblue'}}>
         <p>Total Expenses: ${total}</p>
       </div>
-      <div className='expenseButton'>
-        <button onClick={handleAddIncome}>+ Add Expense</button>
+      <div >
+        <button style={{width: '167.65px',height:'38px',backgroundColor:'#FF4747',borderRadius:'15px',color:'white',fontSize:'large'}} onClick={handleAddIncome}>+ Add Expense</button>
       </div>
       {showForm && (
-        <div className="popup-container">
+        <div className='popup-container'>
           <div className="popup">
             <div> <h2>Add Expense</h2></div>
             <div className='popupContainer2'>

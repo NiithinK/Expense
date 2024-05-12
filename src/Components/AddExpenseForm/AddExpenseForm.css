@@ -1,9 +1,15 @@
 .expense{
-    
-
-
-}
-.wallet{
+    border: 1px solid black;
+    width: 355.41px;
+    height: 181px;
+    border-radius: 10px ;
+    opacity: 0px;
+    text-align: center;
+    background: rgba(155, 155, 155, 1);
+  
+  
+  }
+  .wallet{
     font-family: Ubuntu;
    font-size: 30px;
    font-weight: 700;
@@ -11,19 +17,20 @@
    text-align: left;
     text-align: center;
     color: aliceblue;
-}
-
-
-.balanceButton button{
+  }
+  
+  
+  .expenseButton button{
     width: 167.65px;
     height: 38px;
-    background: linear-gradient(90deg, #B5DC52 0%, #89E148 100%);
+    background: linear-gradient(90deg, #FF9595 0%, #FF4747 80%, #FF3838 100%);
+  
     border-radius: 15px;
     color: aliceblue;
-    font-size: x-large;
+    font-size: large;
     
-}
-.popup-container {
+  }
+  .popup-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,21 +50,31 @@
     
     
   }
-  .popupContainer1{
-    display: flex;
+  .popupContainer2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
     
   }
   
-  .popup input {
+  .popup input  {
     margin-left: 10px;
     margin-right: 10px;
     width: 217px;
     height: 45px;
     border-radius: 15px;
     font-size: large;
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
+  .popup select{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 217px;
+    height: 45px;
+    border-radius: 15px;
+    font-size: large;
+  }
   .popup-buttons1 {
     
     margin-right: 10px;
@@ -77,5 +94,5 @@
     color: black;
     background-color: rgba(217, 217, 217, 1);
     border-radius: 15px;
-
+  
   }

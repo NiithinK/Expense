@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import AddExpenseForm from '../Components/AddExpenseForm/AddExpenseForm';
-import ExpenseList from '../Components/ExpenseList/ExpenseList';
 import WalletBalance from '../Components/Mainpage/AddWallet';
-import ExpenseChart from '../Components/ExpenseChart/ExpenseChart'
 import './Home.css'
-import BarChart from '../Components/BarGrapgh/BarGraph'
+
 
 function Home() {
   const [expenses, setExpenses] = useState([]);
@@ -22,15 +19,13 @@ function Home() {
         <div className='Home'>
         
           <WalletBalance wallet={wallet} />
-           <AddExpenseForm addExpense={addExpense} />
-          <ExpenseChart expenses={expenses} /> 
+         
          
         </div>
       </div>
 
       <div className='Home3'>
-        <ExpenseList expenses={expenses} />
-        <BarChart expenses={expenses} />
+       
       </div>
     </>
   );

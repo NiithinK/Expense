@@ -24,7 +24,7 @@ export default function AddWallet({ wallet }) {
   return (
     <>
    
-     <div className='expense'>
+     <div style={{ border: '1px solid black', width:' 355.41px', height: '181px', textAlign:'center', borderRadius:'10PX', backgroundColor: 'rgba(155, 155, 155, 1)', }}>
        <div className='wallet'>
          <p>Wallet Balance: ${wallet}</p>
        </div>

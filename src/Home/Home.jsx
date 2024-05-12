@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import WalletBalance from '../Components/Mainpage/AddWallet';
 import './Home.css'
-import AddExpenseForm from '../Components/AddExpenseForm/AddExpenseForm'
+import AddExpense from '../Components/AddExpenseForm/AddExpenseForm';
 
 function Home() {
   const [expenses, setExpenses] = useState([]);
@@ -19,7 +19,7 @@ function Home() {
         <div className='Home'>
         
           <WalletBalance wallet={wallet} />
-          <AddExpenseForm expenses={expenses} />
+         <AddExpense/>
           
          
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSnackbar } from 'notistack';
-
+import './AddExpenseForm.css'
 
 const ExpenseCard = ({ addExpense }) => {
   const [showForm, setShowForm] = useState(false);

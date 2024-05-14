@@ -1,0 +1,66 @@
+/* Desktop styles */
+.expense-list-container {
+    background: white;
+    margin-left: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 738.33px;
+    height: 345.03px;
+    margin-top: 30px;
+  }
+  
+  .expense-table th,
+  .expense-table td {
+    padding: 0.5rem 1rem;
+    font-size: x-large;
+  }
+  
+  .expense-table th:last-child,
+  .expense-table td:last-child {
+    text-align: center;
+  }
+  
+  .pagination {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pagination button {
+    margin-right: 5px;
+    font-size: large;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: white;
+    color: black;
+  }
+  
+  .pagination button.active {
+    background: black;
+    color: white;
+  }
+  
+  /* Mobile styles */
+  @media screen and (max-width: 768px) {
+    .expense-list-container {
+      width: auto;
+      margin: 1rem;
+      height: auto;
+    }
+    
+    .expense-table {
+      width: 100%;
+    }
+  
+    .expense-table th,
+    .expense-table td {
+      font-size: large;
+    }
+  
+    .pagination {
+      margin-left: 0;
+      justify-content: center;
+    }
+  }
+  

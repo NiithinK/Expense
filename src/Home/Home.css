@@ -1,27 +1,28 @@
-.Home{
+.Home {
     margin-top: 54px;
-     margin-left: 90px;
-     
+    margin-left: 5%; /* Adjust as needed */
+    margin-right: 5%; /* Adjust as needed */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10rem;
-    width: 50%px;
-    height: 269px;
-    margin-right: 32px;
-    border-radius: 10px ;
-   border-radius: 10px ;
-   background: rgba(98, 98, 98, 1);
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-   }
-
-   .Home3{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width */
+    grid-gap: 2rem;
+    border-radius: 10px;
+    background: rgba(98, 98, 98, 1);
+    height: 300px;
+    padding: 20px;
+}
+.Home3 {
     display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
     justify-content: space-evenly;
-   }
-
-body{
+    margin-top: 20px; /* Adjust spacing */
+}
+body {
     background: rgba(59, 59, 59, 1);
-
+}
+@media screen and (max-width: 768px) {
+    .Home {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width for smaller screens */
+        background: rgba(98, 98, 98, 1);
+        height: 650px;
+    }
 }

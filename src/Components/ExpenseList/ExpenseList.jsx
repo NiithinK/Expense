@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CiEdit } from "react-icons/ci";
 import { TiDelete } from "react-icons/ti";
-
+import './ExpenseList.css'
 const ExpenseList = ({ expenses }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(3);
@@ -15,37 +15,37 @@ const ExpenseList = ({ expenses }) => {
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
-    <div style={{ background: 'white',marginLeft: '5rem', padding: '1rem', borderRadius: '8px',width: '738.33px',height: '345.03px',marginTop:'30px' }}>
+    <div className="expense-list-container">
       <h2>Transaction List</h2>
-      <table>
+      <table className="expense-table">
         <thead>
           <tr>
-            <th style={{ paddingRight: '5rem',paddingBottom: '1rem', fontSize: 'x-large' }}>Title</th>
-            <th style={{ paddingRight: '5rem',paddingBottom: '1rem', fontSize: 'x-large' }}>Amount</th>
-            <th style={{ paddingRight: '5rem',paddingBottom: '1rem', fontSize: 'x-large' }}>Category</th>
-            <th style={{ paddingRight: '5rem',paddingBottom: '1rem',fontSize: 'x-large' }}>Date</th>
-            <th style={{ fontSize: 'x-large' }}>Actions</th>
+            <th>Title</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {currentExpenses.map((expense, index) => (
             <tr key={index}>
-              <td style={{ paddingRight: '2rem',paddingBottom: '1rem', fontSize: 'x-large' }}>{expense.title}</td>
-              <td style={{ paddingRight: '2rem',paddingBottom: '1rem', fontSize: 'x-large' }}>{expense.amount} Rs</td>
-              <td style={{ paddingRight: '2rem',paddingBottom: '1rem', fontSize: 'x-large' }}>{expense.category}</td>
-              <td style={{ paddingRight: '2rem',paddingBottom: '1rem',fontSize: 'x-large' }}>{expense.date}</td>
-              <td style={{ fontSize: 'x-large' }}>
-                <button style={{marginRight: '10PX',width:'2rem',height:'2rem' ,borderRadius:'15px'}}><CiEdit /></button>
-                <button style={{width:'2rem',height:'2rem' ,borderRadius:'15px'}} ><TiDelete /></button>
+              <td>{expense.title}</td>
+              <td>{expense.amount} Rs</td>
+              <td>{expense.category}</td>
+              <td>{expense.date}</td>
+              <td>
+                <button><CiEdit /></button>
+                <button><TiDelete /></button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
       {/* Pagination */}
-      <div style={{marginTop: '40px',marginLeft:'300px',disply:'flex',alignItems:'center'}}>
+      <div className="pagination">
         {Array.from({ length: Math.ceil(expenses.length / itemsPerPage) }, (_, index) => (
-          <button key={index} onClick={() => paginate(index + 1)} style={{marginRight: '5px', fontSize: 'large', padding: '5px 10px', border: '1px solid black', borderRadius: '50%', background: currentPage === index + 1 ? 'black' : 'white',color:currentPage === index + 1 ? 'white' : 'black'}}>
+          <button key={index} onClick={() => paginate(index + 1)} className={currentPage === index + 1 ? 'active' : ''}>
             {index + 1}
           </button>
         ))}
